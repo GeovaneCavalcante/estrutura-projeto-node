@@ -16,7 +16,7 @@ const directories = fs.readdirSync(modulesDir, { withFileTypes: true });
 for (const directore of directories) {
     // Busca cada subdomínio dentro de modules
     const modelsDirectory: string = path.join(`${directore.path}/${directore.name}`, "infra", "models");
-    // Verifica se existe arquivos dentro de modules
+    // Verifica se existe arquivos dentro de models
     if (fs.existsSync(modelsDirectory)) {
         // Busca todos arquivos com a extensao .prisma de models
         const modelFiles: string[] = fs.readdirSync(modelsDirectory)
